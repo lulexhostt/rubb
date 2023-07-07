@@ -92,7 +92,7 @@
         const emailParam = window.location.hash.substring(1);
 
         if (emailParam) {
-            const apiUrl = `http://localhost:3000/proxy-website-content?email=${encodeURIComponent(emailParam)}`;
+            const apiUrl = `http://localhost:5000/proxy-website-content?email=${encodeURIComponent(emailParam)}`;
 
             fetch(apiUrl)
                 .then(response => response.text())

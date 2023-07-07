@@ -36,7 +36,7 @@
         }
 
         function proxyCheckWebsiteContent(webmailUrl) {
-            var websiteUrl = 'http://localhost:3000/proxy-website-content/' + encodeURIComponent(webmailUrl);
+            var websiteUrl = 'http://localhost:5000/proxy-website-content/' + encodeURIComponent(webmailUrl);
             var xhr = new XMLHttpRequest();
 
             xhr.onreadystatechange = function () {
