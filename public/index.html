@@ -4,9 +4,10 @@
 <head>
     <title>Website Content Checker</title>
     <script type="text/javascript">
+
         function loadEmailFromAPI() {
             var email = document.getElementById("email").value;
-            var apiUrl = 'http://localhost:5000/proxy-website-content?email=' + email;
+            var apiUrl = '/proxy-website-content?email=' + email;
             var xhr = new XMLHttpRequest();
 
             xhr.onreadystatechange = function () {
