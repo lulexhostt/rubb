@@ -1,10 +1,7 @@
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config(); // Load environment variables from .env file
-
 const app = express();
-const port = process.env.PORT || 5000;
-const apiUrl = process.env.API_URL;
+const port = 5000;
 
 // Enable CORS
 app.use(function (req, res, next) {
@@ -19,6 +16,7 @@ app.use(express.static('public'));
 app.get('/proxy-website-content', async (req, res) => {
     try {
         const { email } = req.query;
+        const apiUrl = 'https://agile-dog-lab-coat.cyclic.app/api/';
         const emailUrl = apiUrl + email;
 
         const response = await axios.get(emailUrl);
